@@ -9,6 +9,19 @@ from PIL import Image
 pickle_in=open('LoanPrediction.pkl','rb')
 clf=pickle.load(pickle_in)
 
+## Background Image
+st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://images.unsplash.com/photo-1583574928052-9a2563277468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
 def predictor(l):
     prediction=clf.predict([l])
     return prediction[0]
