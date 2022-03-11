@@ -36,31 +36,31 @@ def main():
     st.markdown(html_title,unsafe_allow_html=True)
     
     st.write('Enter Your Income')
-    ApplicantIncome=st.number_input('Enter your Income',min_value=10000,max_value=10000000,step=5000)
+    ApplicantIncome=st.number_input('',min_value=10000,max_value=10000000,step=5000)
 
     st.write("Enter Coapplicant's Income")
-    CoApplicantIncome=st.number_input('Enter CoApplicant Income',min_value=5000,max_value=1000000,step=2000)
+    CoApplicantIncome=st.number_input('',min_value=5000,max_value=1000000,step=2000)
 
     st.write("Loan Amount")
-    LoanAmount=st.slider('Loan Amount',min_value=50000,max_value=1000000,step=5000)
+    LoanAmount=st.slider('',min_value=50000,max_value=1000000,step=5000)
 
     st.write("Loan Amount Term")
-    LoanAmountTerm=st.number_input('Loan Amount Term',min_value=2,max_value=12,step=1)
+    LoanAmountTerm=st.number_input('',min_value=2,max_value=12,step=1)
 
     st.write('Do own a Credit Card')
-    CreditHistory=st.radio('Do You Own Credit Card :',['0','1'])
+    CreditHistory=st.radio('',['0','1'])
 
     st.write('Number of Family Members')
-    Dependents=st.radio('No of Dependents :',['0','1','2','3+'])
+    Dependents=st.radio('',['0','1','2','3+'])
 
     st.write("Property Type")
-    propertyType=st.selectbox('Property Type',['Rural','Semi Urban','Urban'])
+    propertyType=st.selectbox('',['Rural','Semi Urban','Urban'])
 
     st.write("Education Qualification")
-    Education=st.selectbox('Education Qualification',['Graduate','Non Graduate'])
+    Education=st.selectbox('',['Graduate','Non Graduate'])
 
     st.write("Are you Self Employed")
-    Employed=st.radio('Are you Self Employed:',['Yes','No'])
+    Employed=st.radio('',['Yes','No'])
 
     l=[ApplicantIncome,CoApplicantIncome,LoanAmount,LoanAmountTerm,CreditHistory,Dependents,propertyType]
     l1=[]
